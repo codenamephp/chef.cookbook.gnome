@@ -21,7 +21,7 @@ Add the cookbook to your Berksfile or Metadata of your (wrapper) cookbook and th
 
 ## Resources
 ### Package
-The `codenamephp_gui_xfce` resource installs or uninstalls the gnome gui.
+The `codenamephp_gnome_package` resource installs or uninstalls the gnome gui.
 
 #### Actions
 - `:install`: Installs the gui using apt
@@ -33,15 +33,15 @@ The `codenamephp_gui_xfce` resource installs or uninstalls the gnome gui.
 #### Examples
 ```ruby
 # Minmal parameters
-codenamephp_gnome 'install gnome gui'
+codenamephp_gnome_package 'install gnome gui'
 
 # Custom package name
-codenamephp_gnome 'install gnome gui' do
+codenamephp_gnome_package 'install gnome gui' do
   package_name 'gnome'
 end
 
 # Uninstall
-codenamephp_gnome 'install gnome gui' do
+codenamephp_gnome_package 'install gnome gui' do
   action :uninstall
 end
 ```
