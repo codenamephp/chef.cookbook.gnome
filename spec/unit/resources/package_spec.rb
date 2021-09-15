@@ -15,7 +15,7 @@ describe 'codenamephp_gnome_package' do
     end
 
     it 'installs gnome-core from package' do
-      expect(chef_run).to install_package('install gnome from package').with(package_name: 'gnome-core')
+      expect(chef_run).to install_package('install gnome from package').with(package_name: %w(gnome-core gnome-tweaks))
     end
   end
 
@@ -23,6 +23,7 @@ describe 'codenamephp_gnome_package' do
     recipe do
       codenamephp_gnome_package 'install gnome' do
         package_name 'some package'
+        extra_packages ['new package', 'some package', 'another package']
       end
     end
 
@@ -31,7 +32,7 @@ describe 'codenamephp_gnome_package' do
     end
 
     it 'installs gnome-core from package' do
-      expect(chef_run).to install_package('install gnome from package').with(package_name: 'some package')
+      expect(chef_run).to install_package('install gnome from package').with(package_name: ['some package', 'new package', 'another package'])
     end
   end
 
@@ -47,14 +48,15 @@ describe 'codenamephp_gnome_package' do
     end
 
     it 'installs gnome-core from package' do
-      expect(chef_run).to remove_package('uninstall gnome from package').with(package_name: 'gnome-core')
+      expect(chef_run).to remove_package('uninstall gnome from package').with(package_name: %w(gnome-core gnome-tweaks))
     end
   end
 
-  context 'Uninstall with default attributes' do
+  context 'Uninstall with custom attributes' do
     recipe do
       codenamephp_gnome_package 'install gnome' do
         package_name 'some package'
+        extra_packages ['new package', 'some package', 'another package']
         action :uninstall
       end
     end
@@ -64,7 +66,7 @@ describe 'codenamephp_gnome_package' do
     end
 
     it 'installs gnome-core from package' do
-      expect(chef_run).to remove_package('uninstall gnome from package').with(package_name: 'some package')
+      expect(chef_run).to remove_package('uninstall gnome from package').with(package_name: ['some package', 'new package', 'another package'])
     end
   end
 end

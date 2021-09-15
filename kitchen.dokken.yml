@@ -2,6 +2,12 @@ driver:
   name: dokken
   privileged: true # because Docker and SystemD/Upstart
   chef_version: current
+  volumes:
+    # saves the apt archieves outside of the container
+    - /var/cache/apt/archives/:/var/cache/apt/archives/
+  intermediate_instructions:
+    # prevent APT from deleting the APT folder
+    - RUN rm /etc/apt/apt.conf.d/docker-clean
 
 transport:
   name: dokken
@@ -14,4 +20,8 @@ platforms:
   - name: debian-10
     driver:
       image: dokken/debian-10
+      pid_one_command: /bin/systemd
+  - name: debian-11
+    driver:
+      image: dokken/debian-11
       pid_one_command: /bin/systemd
