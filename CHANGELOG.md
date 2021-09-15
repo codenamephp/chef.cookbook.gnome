@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/codenamephp/chef.cookbook.gnome/tree/1.1.0) (2021-09-15)
+
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.gnome/compare/1.0.0...1.1.0)
+
+**Implemented enhancements:**
+
+- Install gnome tweaks in Bullseye [\#3](https://github.com/codenamephp/chef.cookbook.gnome/issues/3)
+- Added extra\_packages property to package resource [\#4](https://github.com/codenamephp/chef.cookbook.gnome/pull/4) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [1.0.0](https://github.com/codenamephp/chef.cookbook.gnome/tree/1.0.0) (2021-07-04)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.gnome/compare/e480163df76d2bffc390ce1abee34734536a712c...1.0.0)
