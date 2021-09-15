@@ -10,6 +10,7 @@ verifier:
 
 platforms:
   - name: debian-10
+  - name: debian-11
 
 suites:
   - name: default
