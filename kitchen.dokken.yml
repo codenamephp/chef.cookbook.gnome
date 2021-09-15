@@ -8,6 +8,7 @@ driver:
   intermediate_instructions:
     # prevent APT from deleting the APT folder
     - RUN rm /etc/apt/apt.conf.d/docker-clean
+    - RUN /usr/bin/apt-get update
 
 transport:
   name: dokken

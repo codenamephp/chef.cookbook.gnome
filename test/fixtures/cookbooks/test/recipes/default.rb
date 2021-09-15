@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-apt_update
-
 user 'test' do
   manage_home true
   shell '/bin/bash'
