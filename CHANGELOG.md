@@ -1,11 +1,12 @@
 # Changelog
 
-## [1.1.1](https://github.com/codenamephp/chef.cookbook.gnome/tree/1.1.1) (2021-11-02)
+## [1.1.1](https://github.com/codenamephp/chef.cookbook.gnome/tree/1.1.1) (2021-11-08)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.gnome/compare/1.1.0...1.1.1)
 
 **Merged pull requests:**
 
+- Bump tubone24/update\_release from 1.2.0 to 1.3.1 [\#7](https://github.com/codenamephp/chef.cookbook.gnome/pull/7) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump bobheadxi/deployments from 0.6.0 to 0.6.1 [\#6](https://github.com/codenamephp/chef.cookbook.gnome/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.1.0](https://github.com/codenamephp/chef.cookbook.gnome/tree/1.1.0) (2021-09-15)
