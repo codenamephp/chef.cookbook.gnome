@@ -1,0 +1,24 @@
+{
+	"name": "Chef Workstation (Community)",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "onCreateCommand": {
+    "install-chef": "curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chef-workstation -c stable"
+  },
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"chef-software.chef",
+				"eamodio.gitlens",
+				"github.copilot"
+			]
+		}
+	},
+	"containerEnv": {
+    "KITCHEN_LOCAL_YAML": "kitchen.dokken.yml",
+		"CHEF_LICENSE": "accept"
+  }
+}
